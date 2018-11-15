@@ -144,11 +144,11 @@ public class DragonsService {
 	}
 	
 	public boolean isAdAlreadyCompleted(String gameId,String adId) {
-		return completedAdRepository.findById(new CompletedAdId(gameId, adId)).isPresent();
+		return completedAdRepository.existsById(new CompletedAdId(gameId, adId));
 	}
 	
 	public boolean isItemAlreadyBought(String gameId,String itemId) {
-		return boughtItemRepository.findById(new BoughtItemId(gameId, itemId)).isPresent();
+		return boughtItemRepository.existsById(new BoughtItemId(gameId, itemId));
 	}
 	
 }

@@ -30,20 +30,6 @@ insert into ITEM 	(name, 		gold,	ability)
 insert into ITEM 	(name, 		gold,	ability)
 	values			('Item15',	4,		2);
 
---games
-insert into GAME	(lives,	gold,	score,	turn)
-	values			(10,	10,		10,		3);
-insert into GAME 	(lives,	gold,	score,	turn)
-	values			(10,	10,		100,	10);
-insert into GAME 	(lives,	gold,	score,	turn)
-	values			(10,	10,		1010,	10);
-	
---bought items	
-insert into BOUGHT_ITEM	(game_id,	item_id)
-	values (2,2);
-insert into BOUGHT_ITEM (game_id,item_id)
-	values(2,1);
-
 --ads	
 insert into AD 	(message,			reward,	appear_turn,	expire_turn,	points_for_tasks,	dificulty)
 	values		('Find a chicken.',	10,		1,				3,				20,					1);
@@ -68,17 +54,7 @@ insert into AD 	(message,			reward,		appear_turn,	expire_turn,	points_for_tasks,
 insert into AD 	(message,							reward,		appear_turn,	expire_turn,	points_for_tasks,	dificulty)
 	values		('Hunt wolves. In faraway vilage.',	50,			1,				10,				50,					10);
 
---completed ads
-insert into COMPLETED_AD (game_id, ad_id)
-	values (2,2);
-insert into COMPLETED_AD (game_id, ad_id)
-	values(2,1);
-insert into COMPLETED_AD (game_id, ad_id)
-	values (1,2);
-insert into COMPLETED_AD (game_id, ad_id)
-	values(1,1);
-insert into COMPLETED_AD (game_id, ad_id)
-	values (3,2);
+
 
 
 	
