@@ -1,7 +1,6 @@
 package io.github.aleksandras_sivkovas.game.dragons.backend.repository;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,12 +23,4 @@ public interface ItemRepository  extends JpaRepository<Item,String> {
 	)
 	public List<ItemDTO> findNotBoughtItemsByGame(@Param("gameId") String gameId,Pageable pageable);
 	
-	@Query(
-		"SELECT sum(i.ability)"
-		+ "FROM Game g1 "
-		+ "JOIN g1.boughtItems bi "
-		+ "JOIN bi.item i "
-		+ "WHERE g1.id = :gameId"
-	)
-	public Optional<Integer> getBoughtItemsAbility(@Param("gameId") String gameId);
 }
